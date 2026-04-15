@@ -26,16 +26,25 @@ export const localeMetadata: Record<
   },
 };
 
+function normalizeSiteOrigin(value: string) {
+  try {
+    const normalized = /^https?:\/\//i.test(value) ? value : `https://${value}`;
+
+    return new URL(normalized).origin;
+  } catch {
+    return undefined;
+  }
+}
+
 export function getSiteUrl() {
   const configuredUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  const vercelProductionUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL?.trim();
+  const vercelDeploymentUrl = process.env.VERCEL_URL?.trim();
 
-  if (!configuredUrl) {
-    return "https://example.com";
-  }
-
-  try {
-    return new URL(configuredUrl).origin;
-  } catch {
-    return "https://example.com";
-  }
+  return (
+    normalizeSiteOrigin(configuredUrl ?? "") ??
+    normalizeSiteOrigin(vercelProductionUrl ?? "") ??
+    normalizeSiteOrigin(vercelDeploymentUrl ?? "") ??
+    "https://example.com"
+  );
 }
