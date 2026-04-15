@@ -1,0 +1,257 @@
+{
+  "Common": {
+    "brand": "整理と変換の道具箱",
+    "badge": "ブラウザ内で処理",
+    "skipToContent": "本文へ移動",
+    "localeSwitcherLabel": "言語を選ぶ",
+    "locales": {
+      "ja": "日本語",
+      "en": "English"
+    }
+  },
+  "SiteChrome": {
+    "navigationLabel": "メインナビゲーション",
+    "pagesTitle": "ページ一覧",
+    "openMenuLabel": "メニュー",
+    "closeMenuLabel": "閉じる",
+    "homeLabel": "ホーム",
+    "breadcrumbsLabel": "パンくず",
+    "categoryLinks": {
+      "themes": "できること",
+      "principles": "サイトの特長",
+      "faq": "よくある質問"
+    },
+    "pageLinks": {
+      "about": "このサイトについて",
+      "guide": "使い方ガイド",
+      "faq": "よくある質問",
+      "privacy": "プライバシー",
+      "terms": "利用規約",
+      "contact": "お問い合わせ"
+    },
+    "footer": {
+      "title": "ブラウザで使える整理・変換ツールサイト",
+      "description": "文章整理、CSV 前処理、ファイル名調整、PDF 整理などを、ブラウザ内で処理できるツールとしてまとめています。",
+      "categoriesTitle": "ツールカテゴリ",
+      "pagesTitle": "ページ一覧",
+      "copyright": "All rights reserved."
+    }
+  },
+  "HomePage": {
+    "navigation": {
+      "themes": "できること",
+      "principles": "サイトの特長",
+      "faq": "よくある質問"
+    },
+    "hero": {
+      "eyebrow": "ブラウザで終わらせる整理・変換ツール",
+      "title": "面倒な整理・変換作業を、ブラウザで手早く終わらせる。",
+      "description": "文章整理、CSV 前処理、ファイル名調整、PDF や字幕の整理など、共有前や登録前の作業をブラウザ上でまとめて進められるツールサイトです。",
+      "chips": [
+        "入力データはブラウザ内で処理",
+        "AI学習用に送信しない設計",
+        "保存前に結果を確認"
+      ],
+      "primaryCta": "ツール一覧を見る",
+      "secondaryCta": "使い方ガイドを見る",
+      "panelLabel": "主な用途",
+      "panelTitle": "文章、表データ、ファイル、PDF の整理をまとめて進めやすくしたサイトです。",
+      "panelItems": [
+        "貼り付けた文章や箇条書きを、共有しやすい形に整える。",
+        "表データを、スプレッドシート取込や CMS 更新の前に整える。",
+        "ファイル名や資料セットを、受け渡し前に見直してそろえる。"
+      ],
+      "footnote": "各ツールページでは、対応形式、使い方、注意点、関連情報をまとめて確認できます。",
+      "notice": {
+        "title": "入力データはブラウザ内で処理します",
+        "description": "このサイトの対応ツールは、入力したファイルやテキストをブラウザ内で処理します。AI 学習用に送信する仕組みは入れていません。"
+      }
+    },
+    "principles": {
+      "title": "使いやすさの特長",
+      "description": "入力データの扱いがわかりやすく、保存前に確認しやすく、近い作業を続けて進めやすい構成にしています。",
+      "items": {
+        "localFirst": {
+          "title": "入力データをブラウザ内で処理",
+          "description": "対応ツールでは、入力したファイルやテキストをブラウザ内で処理します。AI 学習用に送信する仕組みは入れていません。"
+        },
+        "reviewBeforeExport": {
+          "title": "保存前に結果を確認できる",
+          "description": "変換後の内容やファイル名を見てから、コピーやダウンロードを進められます。"
+        },
+        "noInstall": {
+          "title": "ソフトの準備なしですぐ使える",
+          "description": "インストールや複雑な設定なしで、そのまま作業を始められます。"
+        },
+        "multiTool": {
+          "title": "関連ツールを続けて使える",
+          "description": "文章整理、表データ、ファイル整理など、近い作業をサイト内で続けて進められます。"
+        }
+      }
+    },
+    "themes": {
+      "title": "よくある整理・変換テーマ",
+      "description": "共有前、登録前、保存前に発生しやすい整理・変換作業を、テーマごとにまとめています。",
+      "statusLabel": "",
+      "emptyState": {
+        "eyebrow": "ツール一覧",
+        "title": "複数の実用ツールを公開しています。",
+        "description": "整理、変換、PDF、字幕調整などのツールをまとめて見られる一覧ページを用意しています。",
+        "action": "ツール一覧を見る"
+      },
+      "items": {
+        "textCleanup": {
+          "title": "文章整理と箇条書き整形",
+          "description": "貼り付けた文章、箇条書き、区切りの揺れを整え、チャット・文書・入力フォームに流し込みやすくします。",
+          "examples": [
+            "改行の整理",
+            "箇条書き記号の統一",
+            "区切り文字と空白の整形"
+          ]
+        },
+        "tablePrep": {
+          "title": "表データと CSV の前処理",
+          "description": "スプレッドシート取込や CMS 更新の前に発生しやすい、地味な下ごしらえ作業を扱います。",
+          "examples": [
+            "列の分割と結合",
+            "不要な空白や記号の除去",
+            "CSV 向けの出力整形"
+          ]
+        },
+        "fileNaming": {
+          "title": "ファイル名と命名ルール補助",
+          "description": "共有前に命名規則を確認しやすくし、フォルダ内の見通しや受け渡しのしやすさを整えます。",
+          "examples": [
+            "連番の桁揃え",
+            "接頭辞・接尾辞の付与",
+            "命名パターンの事前確認"
+          ]
+        }
+      }
+    },
+    "process": {
+      "title": "使い方の流れ",
+      "description": "どのツールでも、入力して、内容を確認して、そのまま持ち帰れる流れで使えます。",
+      "items": {
+        "paste": {
+          "title": "元データを貼る・読み込む",
+          "description": "テキスト、一覧、シンプルなファイルからすぐ始められるようにし、準備コストを増やしません。"
+        },
+        "preview": {
+          "title": "ローカルで結果を確認する",
+          "description": "コピーやダウンロードの前に、何が整ったかを画面上で把握しやすくします。"
+        },
+        "finish": {
+          "title": "そのまま使える形で持ち帰る",
+          "description": "急いでいる事務作業でも迷わず終われるよう、最後の導線は明快にします。"
+        }
+      }
+    },
+    "faq": {
+      "title": "よくある質問",
+      "description": "利用前によく確認される点をまとめています。",
+      "items": {
+        "upload": {
+          "question": "データはサーバーに送られますか？",
+          "answer": "対応ツールでは、入力したファイルやテキストをブラウザ内で処理します。AI 学習用に送信する仕組みは入れていません。"
+        },
+        "languages": {
+          "question": "日本語と英語を切り替えられますか？",
+          "answer": "はい。`/ja` と `/en` を前提にルーティングし、ヘッダーから言語を切り替えられるようにしています。"
+        },
+        "devices": {
+          "question": "スマホでも使えますか？",
+          "answer": "ページ自体はレスポンシブ対応ですが、表データやファイル系の重めの作業はデスクトップの方が快適です。簡単な文章整理はスマホでも扱いやすく保ちます。"
+        }
+      }
+    },
+    "structuredData": {
+      "pageName": "整理と変換ツールのカテゴリページ",
+      "pageDescription": "ブラウザで使える整理・整形・変換ツールをまとめたカテゴリページです。"
+    }
+  },
+  "ToolIndex": {
+    "eyebrow": "公開中のツール",
+    "title": "ツール一覧",
+    "description": "現在公開している整理・変換ツールを一覧できます。対応形式、使い方、注意点を各ページで確認しながら使えます。",
+    "openTool": "ツールを開く",
+    "metadataTitle": "ツール一覧 | 整理と変換の道具箱",
+    "metadataDescription": "現在公開している整理・変換ツールを一覧できるページです。"
+  },
+  "ToolTemplate": {
+    "supportedFormats": "対応形式",
+    "capabilities": "できること",
+    "idealFor": "こんな人向け",
+    "steps": "使い方",
+    "examples": "使用例",
+    "cautions": "注意点",
+    "faq": "FAQ",
+    "relatedTools": "関連ツール",
+    "relatedArticles": "関連記事",
+    "history": "更新履歴",
+    "examplesLabels": {
+      "before": "整形前",
+      "after": "整形後",
+      "note": "補足"
+    },
+    "emptyStates": {
+      "relatedTools": {
+        "eyebrow": "関連ツール",
+        "title": "ツール一覧から近い作業を探せます。",
+        "description": "同じテーマの整理・変換ツールを一覧からまとめて確認できます。"
+      },
+      "relatedArticles": {
+        "eyebrow": "関連情報",
+        "title": "使い方ガイド一覧もあわせてご覧ください。",
+        "description": "固定ページやフッターの案内から、方針・問い合わせ・共通ルールも確認できます。"
+      }
+    }
+  },
+  "GuideIndex": {
+    "eyebrow": "実務で使いやすいガイド",
+    "title": "使い方ガイド",
+    "description": "よくある整理・変換作業の進め方を、非エンジニア向けにわかりやすくまとめています。内容をつかんだら、そのまま対応ツールへ進めます。",
+    "metadataTitle": "使い方ガイド | 整理と変換の道具箱",
+    "metadataDescription": "ファイル名整理、CSV整形、PDFページ順修正、SRT / VTT 字幕調整の進め方をまとめた日本語ガイド一覧です。",
+    "openArticleLabel": "ガイドを読む",
+    "relatedToolLabel": "対応ツール",
+    "updatedLabel": "更新日",
+    "readTime": "{minutes}分で読めます"
+  },
+  "GuideArticleTemplate": {
+    "summary": "要点まとめ",
+    "intro": "このガイドでわかること",
+    "published": "公開日",
+    "updated": "更新日",
+    "readTime": "読了目安",
+    "steps": "進め方",
+    "faq": "FAQ",
+    "relatedTools": "関連ツール",
+    "relatedArticles": "関連記事",
+    "openTool": "ツールを開く",
+    "emptyStates": {
+      "relatedTools": {
+        "eyebrow": "関連ツール",
+        "title": "ツール一覧から近い作業を探せます。",
+        "description": "一覧ページを開くと、同じテーマのツールをまとめて確認できます。"
+      },
+      "relatedArticles": {
+        "eyebrow": "ガイド一覧",
+        "title": "使い方ガイド一覧から関連する読み物を探せます。",
+        "description": "近いテーマの整理・変換作業を、ガイド一覧からまとめて確認できます。"
+      }
+    }
+  },
+  "Metadata": {
+    "siteName": "整理と変換の道具箱",
+    "title": "整理と変換の道具箱 | 文章整理・CSV 前処理・PDF 整理のブラウザツール",
+    "description": "文章整理、一覧整形、CSV 前処理、ファイル名調整、PDF 整理などをブラウザで手早く進めるためのツールサイトです。",
+    "keywords": [
+      "整理ツール",
+      "変換ツール",
+      "CSV 前処理",
+      "PDF 整理",
+      "ファイル名変更"
+    ]
+  }
+}

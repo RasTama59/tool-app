@@ -1,0 +1,257 @@
+{
+  "Common": {
+    "brand": "Cleanup & Conversion Toolkit",
+    "badge": "In-browser processing",
+    "skipToContent": "Skip to content",
+    "localeSwitcherLabel": "Select language",
+    "locales": {
+      "ja": "日本語",
+      "en": "English"
+    }
+  },
+  "SiteChrome": {
+    "navigationLabel": "Main navigation",
+    "pagesTitle": "Pages",
+    "openMenuLabel": "Menu",
+    "closeMenuLabel": "Close",
+    "homeLabel": "Home",
+    "breadcrumbsLabel": "Breadcrumb",
+    "categoryLinks": {
+      "themes": "What you can do",
+      "principles": "Site features",
+      "faq": "FAQ"
+    },
+    "pageLinks": {
+      "about": "About",
+      "guide": "Guide",
+      "faq": "FAQ",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "contact": "Contact"
+    },
+    "footer": {
+      "title": "Browser tools for cleanup and conversion work",
+      "description": "The site brings together browser tools for text cleanup, CSV prep, filename changes, PDF cleanup and similar tasks.",
+      "categoriesTitle": "Tool categories",
+      "pagesTitle": "Pages",
+      "copyright": "All rights reserved."
+    }
+  },
+  "HomePage": {
+    "navigation": {
+      "themes": "What you can do",
+      "principles": "Site features",
+      "faq": "FAQ"
+    },
+    "hero": {
+      "eyebrow": "Browser tools for repetitive cleanup work",
+      "title": "Finish repetitive cleanup work in your browser.",
+      "description": "Use browser tools for list cleanup, CSV prep, filename fixes, PDF page cleanup and subtitle timing adjustments without heavy desktop software.",
+      "chips": [
+        "Process files and text in-browser",
+        "Not sent for AI training",
+        "Preview before you save"
+      ],
+      "primaryCta": "Browse tools",
+      "secondaryCta": "Read guides",
+      "panelLabel": "Main use cases",
+      "panelTitle": "One place for text, table, file and document cleanup.",
+      "panelItems": [
+        "Clean pasted text and lists before sharing or registering data.",
+        "Prepare table data before spreadsheet import, CMS updates or internal tools.",
+        "Normalize filenames and document sets before handoff or storage."
+      ],
+      "footnote": "Each tool page includes supported formats, steps, cautions and related guides.",
+      "notice": {
+        "title": "Inputs stay in your browser",
+        "description": "Supported tools process your files and text in the browser. The site does not include a mechanism that sends those inputs for AI training."
+      }
+    },
+    "principles": {
+      "title": "Why the site is easy to use",
+      "description": "The site makes input handling clear, keeps review easy before export, and helps you move through related tasks without extra setup.",
+      "items": {
+        "localFirst": {
+          "title": "Process inputs in-browser",
+          "description": "Supported tools process your files and text in the browser. The site does not include a mechanism that sends those inputs for AI training."
+        },
+        "reviewBeforeExport": {
+          "title": "Review before you save",
+          "description": "You can check renamed files, converted output or cleaned text before copying or downloading the result."
+        },
+        "noInstall": {
+          "title": "Start without installing software",
+          "description": "The tools are designed so you can open the page and start working without extra setup."
+        },
+        "multiTool": {
+          "title": "Move between related tools",
+          "description": "Text cleanup, table prep, file organization and related guides are grouped so nearby tasks are easier to continue."
+        }
+      }
+    },
+    "themes": {
+      "title": "Common cleanup themes",
+      "description": "The site covers recurring cleanup and conversion tasks that usually happen before sharing, uploading or saving files.",
+      "statusLabel": "",
+      "emptyState": {
+        "eyebrow": "Tool directory",
+        "title": "Multiple working tools are now available.",
+        "description": "Open the full directory to browse cleanup, conversion, PDF and subtitle tools from one place.",
+        "action": "Browse tools"
+      },
+      "items": {
+        "textCleanup": {
+          "title": "Text cleanup and list shaping",
+          "description": "Tidy up pasted text, bullet lists and separators so the result is easier to reuse in chat tools, docs and forms.",
+          "examples": [
+            "Normalize line breaks",
+            "Unify bullet styles",
+            "Convert separators and spacing"
+          ]
+        },
+        "tablePrep": {
+          "title": "Table and CSV preparation",
+          "description": "Handle the boring prep work that often happens before spreadsheet imports or CMS updates.",
+          "examples": [
+            "Split and merge columns",
+            "Trim unwanted spaces and symbols",
+            "Prepare CSV-friendly output"
+          ]
+        },
+        "fileNaming": {
+          "title": "Filename and naming helpers",
+          "description": "Preview naming rules before applying them so shared folders and handoffs stay consistent.",
+          "examples": [
+            "Align sequential numbering",
+            "Add prefixes or suffixes",
+            "Preview naming patterns safely"
+          ]
+        }
+      }
+    },
+    "process": {
+      "title": "How the tools work",
+      "description": "Most tools follow the same easy flow: add input, review the result, then copy or download it.",
+      "items": {
+        "paste": {
+          "title": "Paste or import source data",
+          "description": "Users should be able to start from text, lists or simple files without setup overhead."
+        },
+        "preview": {
+          "title": "Review the cleaned result locally",
+          "description": "The interface should make differences visible before someone copies or downloads the final output."
+        },
+        "finish": {
+          "title": "Copy or export with confidence",
+          "description": "The handoff step should be obvious and fast, especially for small admin tasks done under time pressure."
+        }
+      }
+    },
+    "faq": {
+      "title": "FAQ",
+      "description": "Common questions before you start.",
+      "items": {
+        "upload": {
+          "question": "Will data be uploaded to a server?",
+          "answer": "Supported tools process your files and text in the browser. The site does not include a mechanism that sends those inputs for AI training."
+        },
+        "languages": {
+          "question": "Can I switch between Japanese and English?",
+          "answer": "Yes. Routing and UI copy are structured around both `/ja` and `/en`, and the language switcher is available directly in the header."
+        },
+        "devices": {
+          "question": "Will the tools work on mobile?",
+          "answer": "The site is responsive, but larger table and file workflows will still feel better on desktop. Simpler text cleanup should remain usable on phones."
+        }
+      }
+    },
+    "structuredData": {
+      "pageName": "Cleanup and conversion tool directory",
+      "pageDescription": "A browser-based directory page for cleanup, formatting and conversion tools."
+    }
+  },
+  "ToolIndex": {
+    "eyebrow": "Available tools",
+    "title": "Tools",
+    "description": "Browse the current cleanup and conversion tools. Each page explains supported formats, steps, cautions and local-processing expectations.",
+    "openTool": "Open tool",
+    "metadataTitle": "Tools | Cleanup & Conversion Toolkit",
+    "metadataDescription": "Browse the current cleanup and conversion tools available on the site."
+  },
+  "ToolTemplate": {
+    "supportedFormats": "Supported formats",
+    "capabilities": "What you can do",
+    "idealFor": "Who this is for",
+    "steps": "How to use it",
+    "examples": "Examples",
+    "cautions": "Things to watch",
+    "faq": "FAQ",
+    "relatedTools": "Related tools",
+    "relatedArticles": "Related articles",
+    "history": "Update history",
+    "examplesLabels": {
+      "before": "Before",
+      "after": "After",
+      "note": "Note"
+    },
+    "emptyStates": {
+      "relatedTools": {
+        "eyebrow": "Related tools",
+        "title": "Check the tool directory for more cleanup tools.",
+        "description": "The full tool list may include nearby workflows that fit the same task."
+      },
+      "relatedArticles": {
+        "eyebrow": "Related reading",
+        "title": "Use the guide library for more walkthroughs.",
+        "description": "You can also use the footer and fixed pages to confirm policies, contact paths and shared guidance."
+      }
+    }
+  },
+  "GuideIndex": {
+    "eyebrow": "Practical guides",
+    "title": "Guides",
+    "description": "Read plain-language walkthroughs for common cleanup tasks, then jump straight into the matching browser tool when you are ready.",
+    "metadataTitle": "Guides | Cleanup & Conversion Toolkit",
+    "metadataDescription": "Plain-language guides for bulk file renaming, CSV cleanup, PDF page reordering and SRT / VTT subtitle timing fixes.",
+    "openArticleLabel": "Read guide",
+    "relatedToolLabel": "Related tool",
+    "updatedLabel": "Updated",
+    "readTime": "{minutes} min read"
+  },
+  "GuideArticleTemplate": {
+    "summary": "Quick summary",
+    "intro": "What this guide covers",
+    "published": "Published",
+    "updated": "Updated",
+    "readTime": "Read time",
+    "steps": "How to do it",
+    "faq": "FAQ",
+    "relatedTools": "Related tools",
+    "relatedArticles": "Related articles",
+    "openTool": "Open tool",
+    "emptyStates": {
+      "relatedTools": {
+        "eyebrow": "Related tools",
+        "title": "Open the tool directory to browse similar tools.",
+        "description": "The full tool list may include another workflow that fits the same task."
+      },
+      "relatedArticles": {
+        "eyebrow": "Guide library",
+        "title": "Browse the guide index for more walkthroughs.",
+        "description": "Use the guide library to find other practical explanations around nearby tasks."
+      }
+    }
+  },
+  "Metadata": {
+    "siteName": "Cleanup & Conversion Toolkit",
+    "title": "Cleanup & Conversion Toolkit | Browser tools for text cleanup and data prep",
+    "description": "A browser-based tool site for text cleanup, CSV prep, filename changes, PDF page cleanup and similar repetitive tasks.",
+    "keywords": [
+      "browser tools",
+      "text cleanup",
+      "csv preparation",
+      "pdf page cleanup",
+      "filename tools"
+    ]
+  }
+}
