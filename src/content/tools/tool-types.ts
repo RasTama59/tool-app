@@ -77,6 +77,10 @@ export type FileBatchRenameOperationContent = {
   };
   fields: {
     caseSensitiveReplaceLabel: string;
+    customBaseNameEnabledHint: string;
+    customBaseNameEnabledLabel: string;
+    customBaseNameLabel: string;
+    customBaseNamePlaceholder: string;
     digitsHint: string;
     digitsLabel: string;
     findLabel: string;
@@ -500,6 +504,7 @@ export type RenameSortOrder = "added" | "nameAsc" | "nameDesc";
 
 export type FileBatchRenameOptions = {
   caseSensitiveReplace: boolean;
+  customBaseName: string;
   digits: number;
   findText: string;
   prefix: string;
@@ -509,6 +514,7 @@ export type FileBatchRenameOptions = {
   sortOrder: RenameSortOrder;
   startNumber: number;
   suffix: string;
+  useCustomBaseName: boolean;
 };
 
 export type FileRenamePreviewItem = {

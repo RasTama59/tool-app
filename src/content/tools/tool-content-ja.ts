@@ -255,11 +255,11 @@ export const toolContentJa: ToolContentDictionary = {
     title: "ファイル一括リネーム",
     category: "ファイル名整理と連番付与",
     description:
-      "複数ファイルをまとめて選び、先頭追加・末尾追加・文字置換・連番付与のルールで新しい名前をプレビューし、そのまま ZIP で一括ダウンロードできるローカル処理ツールです。",
+      "複数ファイルをまとめて選び、先頭追加・末尾追加・文字置換・共通名指定・連番付与のルールで新しい名前をプレビューし、そのまま ZIP で一括ダウンロードできるローカル処理ツールです。",
     metadata: {
       title: "ファイル一括リネーム | 整理と変換の道具箱",
       description:
-        "複数ファイル名をローカルで一括変換し、連番付与や置換を確認して ZIP でまとめてダウンロードできるブラウザツールです。",
+        "複数ファイル名をローカルで一括変換し、共通名、連番付与や置換を確認して ZIP でまとめてダウンロードできるブラウザツールです。",
       keywords: [
         "ファイル一括リネーム",
         "ファイル名変更",
@@ -279,6 +279,7 @@ export const toolContentJa: ToolContentDictionary = {
     capabilities: [
       "複数ファイルをまとめて追加し、ドラッグ＆ドロップでも取り込める",
       "先頭追加、末尾追加、一部文字列の置換、連番付与を組み合わせられる",
+      "元の名前を使わず、全ファイルを共通のベース名へそろえて連番を付けられる",
       "ファイル名順や追加順でプレビュー順を切り替え、連番の振り方を調整できる",
       "拡張子を維持したまま、新しい名前を一覧プレビューできる",
       "空名、重複名、不正文字の簡易チェックをしてから ZIP で一括ダウンロードできる"
@@ -286,6 +287,7 @@ export const toolContentJa: ToolContentDictionary = {
     idealFor: [
       "撮影データや添付資料の名前をまとめてそろえたい人",
       "提出前にファイル名へ案件名や日付を追加したい人",
+      "すべてのファイル名を `提出用` のような共通名と連番でそろえたい人",
       "共有フォルダへ入れる前に、連番や命名規則を整えたい人"
     ],
     steps: [
@@ -297,7 +299,7 @@ export const toolContentJa: ToolContentDictionary = {
       {
         title: "リネームルールを設定する",
         description:
-          "先頭追加、末尾追加、文字置換、連番付与、置換時の大文字小文字、並び順を左側で調整します。"
+          "共通名指定、先頭追加、末尾追加、文字置換、連番付与、置換時の大文字小文字、並び順を左側で調整します。"
       },
       {
         title: "プレビューと警告を確認する",
@@ -324,6 +326,13 @@ export const toolContentJa: ToolContentDictionary = {
         after: "見積書_提出版.pdf\n請求書_提出版.pdf",
         note:
           "`仮` を `提出版` に置き換え、拡張子はそのまま維持します。"
+      },
+      {
+        title: "すべての名前を共通名にそろえて連番を付ける",
+        before: "scan_01.pdf\nscan_02.pdf\nscan_03.pdf",
+        after: "提出用-01.pdf\n提出用-02.pdf\n提出用-03.pdf",
+        note:
+          "元の名前を使わず、共通のベース名を `提出用` にして 2 桁連番を末尾へ付けた例です。"
       }
     ],
     cautions: [
@@ -346,6 +355,11 @@ export const toolContentJa: ToolContentDictionary = {
         question: "拡張子は変わりますか？",
         answer:
           "拡張子は維持します。変わるのは基本的にファイル名本体だけです。"
+      },
+      {
+        question: "すべてのファイル名を同じベース名にそろえられますか？",
+        answer:
+          "はい。共通名を指定すると、元の名前を使わず `提出用` のようなベース名へまとめて変更できます。その上で接頭語、接尾語、連番も組み合わせられます。"
       }
     ],
     relatedTools: [
@@ -380,6 +394,11 @@ export const toolContentJa: ToolContentDictionary = {
       {
         date: "2026-04-15",
         summary:
+          "元の名前を使わず、共通名へ一括変更した上で接頭語・接尾語・連番を組み合わせられる機能を追加しました。"
+      },
+      {
+        date: "2026-04-15",
+        summary:
           "プレビューの並び順切り替えと、大文字小文字を区別する置換設定を追加しました。"
       },
       {
@@ -398,7 +417,7 @@ export const toolContentJa: ToolContentDictionary = {
       ui: {
         title: "ファイル選択とリネーム設定",
         description:
-          "左でファイルとルールを設定し、右で新しい名前を確認します。問題がなければ ZIP にまとめてダウンロードできます。",
+          "左でファイルとルールを設定し、右で新しい名前を確認します。共通名でそろえる場合も、問題がなければ ZIP にまとめてダウンロードできます。",
         dropzone: {
           title: "対象ファイル",
           description:
@@ -415,6 +434,11 @@ export const toolContentJa: ToolContentDictionary = {
         },
         fields: {
           caseSensitiveReplaceLabel: "置換時に大文字小文字を区別する",
+          customBaseNameEnabledLabel: "元の名前を使わず、共通のベース名にそろえる",
+          customBaseNameEnabledHint:
+            "例: `提出用` にそろえた上で、接頭語・接尾語・連番を追加できます。",
+          customBaseNameLabel: "共通のベース名",
+          customBaseNamePlaceholder: "例: 提出用",
           prefixLabel: "先頭に追加する文字",
           prefixPlaceholder: "例: project-",
           suffixLabel: "末尾に追加する文字",
@@ -446,7 +470,7 @@ export const toolContentJa: ToolContentDictionary = {
           extensionNote:
             "拡張子は自動で維持します。変わるのはファイル名本体だけです。",
           ruleOrder:
-            "新しい名前は、置換 → 先頭/末尾文字の追加 → 連番付与 の順で組み立てます。連番は選んだ並び順に沿って付与されます。"
+            "新しい名前は、共通名指定がオンならその名前、オフなら元の名前へ置換を適用した結果を元に、先頭/末尾文字の追加 → 連番付与 の順で組み立てます。連番は選んだ並び順に沿って付与されます。"
         },
         preview: {
           title: "リネームプレビュー",

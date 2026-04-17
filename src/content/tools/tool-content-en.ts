@@ -255,11 +255,11 @@ export const toolContentEn: ToolContentDictionary = {
     title: "Batch File Rename Tool",
     category: "Filename cleanup and numbering",
     description:
-      "Select multiple files, preview new names with prefix, suffix, replace and numbering rules, then download the renamed set as a ZIP file without sending files to a server.",
+      "Select multiple files, preview new names with prefix, suffix, replace, shared base-name and numbering rules, then download the renamed set as a ZIP file without sending files to a server.",
     metadata: {
       title: "Batch File Rename Tool | Cleanup & Conversion Toolkit",
       description:
-        "Rename multiple files locally in the browser with numbering, prefix, suffix and replace rules, then download them together as ZIP.",
+        "Rename multiple files locally in the browser with shared base names, numbering, prefix, suffix and replace rules, then download them together as ZIP.",
       keywords: [
         "batch file rename tool",
         "filename renamer",
@@ -279,6 +279,7 @@ export const toolContentEn: ToolContentDictionary = {
     capabilities: [
       "Add and review multiple files at once, including drag and drop",
       "Combine prefix, suffix, replace and sequential numbering rules",
+      "Replace every original name with one shared base name before adding numbering or labels",
       "Control the preview order used for numbering with file-name ascending, descending or added order",
       "Keep file extensions while previewing the full renamed filename",
       "Detect empty names, duplicates and simple invalid-character issues before ZIP download"
@@ -286,6 +287,7 @@ export const toolContentEn: ToolContentDictionary = {
     idealFor: [
       "People cleaning up shared-folder filenames before handoff",
       "Teams adding project labels or numbering to batches of files",
+      "Anyone who wants every file renamed to one shared label such as `submission` plus numbering",
       "Anyone preparing images, PDFs or attachments before submission"
     ],
     steps: [
@@ -297,7 +299,7 @@ export const toolContentEn: ToolContentDictionary = {
       {
         title: "Set the rename rules",
         description:
-          "Adjust prefix, suffix, replace, numbering, replace sensitivity and preview order settings on the left side."
+          "Adjust shared base name, prefix, suffix, replace, numbering, replace sensitivity and preview order settings on the left side."
       },
       {
         title: "Review the preview and warnings",
@@ -324,6 +326,13 @@ export const toolContentEn: ToolContentDictionary = {
         after: "estimate_final.pdf\ninvoice_final.pdf",
         note:
           "The matching text is replaced while the original extensions stay untouched."
+      },
+      {
+        title: "Rename every file to one shared submission label",
+        before: "scan_01.pdf\nscan_02.pdf\nscan_03.pdf",
+        after: "submission-01.pdf\nsubmission-02.pdf\nsubmission-03.pdf",
+        note:
+          "This uses one shared base name instead of the original names, then adds a two-digit suffix sequence."
       }
     ],
     cautions: [
@@ -346,6 +355,11 @@ export const toolContentEn: ToolContentDictionary = {
         question: "Are file extensions preserved?",
         answer:
           "Yes. The tool keeps the extension and changes only the filename body."
+      },
+      {
+        question: "Can I rename every file to the same base label?",
+        answer:
+          "Yes. You can switch to a shared base name such as `submission`, then still add prefixes, suffixes and sequential numbering around it."
       }
     ],
     relatedTools: [
@@ -380,6 +394,11 @@ export const toolContentEn: ToolContentDictionary = {
       {
         date: "2026-04-15",
         summary:
+          "Added a shared base-name option so every file can be renamed to one common label before prefixes, suffixes and numbering are applied."
+      },
+      {
+        date: "2026-04-15",
+        summary:
           "Added preview sort-order controls and case-sensitive replace settings so numbering and replacement rules are easier to tune."
       },
       {
@@ -398,7 +417,7 @@ export const toolContentEn: ToolContentDictionary = {
       ui: {
         title: "File selection and rename rules",
         description:
-          "Set files and rules on the left, review the new names on the right, then download the renamed result as ZIP when everything looks ready.",
+          "Set files and rules on the left, review the new names on the right, then download the renamed result as ZIP when everything looks ready, including shared base-name patterns.",
         dropzone: {
           title: "Files to rename",
           description:
@@ -415,6 +434,12 @@ export const toolContentEn: ToolContentDictionary = {
         },
         fields: {
           caseSensitiveReplaceLabel: "Treat replacement text as case-sensitive",
+          customBaseNameEnabledLabel:
+            "Ignore original names and use one shared base name",
+          customBaseNameEnabledHint:
+            "Example: rename every file to `submission`, then add prefixes, suffixes or numbering.",
+          customBaseNameLabel: "Shared base name",
+          customBaseNamePlaceholder: "Example: submission",
           prefixLabel: "Text to add at the beginning",
           prefixPlaceholder: "Example: project-",
           suffixLabel: "Text to add at the end",
@@ -446,7 +471,7 @@ export const toolContentEn: ToolContentDictionary = {
           extensionNote:
             "Extensions are preserved automatically. Only the filename body changes.",
           ruleOrder:
-            "New names are built in this order: replace text, add prefix/suffix, then add numbering. The selected preview order controls the numbering sequence."
+            "New names are built from either the shared base name or the original name after replacement, then prefix/suffix text is added, then numbering. The selected preview order controls the numbering sequence."
         },
         preview: {
           title: "Rename preview",

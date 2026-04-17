@@ -78,9 +78,9 @@ function buildRenamedStem(
   const sequenceNumber = options.startNumber + previewIndex;
   const paddedSequence = padSequenceNumber(sequenceNumber, options.digits);
 
-  let stem = originalStem;
+  let stem = options.useCustomBaseName ? options.customBaseName : originalStem;
 
-  if (options.findText) {
+  if (!options.useCustomBaseName && options.findText) {
     stem = replaceMatchingText(
       stem,
       options.findText,
@@ -129,6 +129,7 @@ function collectStemIssues(stem: string): ToolPreviewIssueCode[] {
 export function createInitialRenameOptions(): FileBatchRenameOptions {
   return {
     caseSensitiveReplace: true,
+    customBaseName: "",
     digits: 3,
     findText: "",
     prefix: "",
@@ -138,6 +139,7 @@ export function createInitialRenameOptions(): FileBatchRenameOptions {
     sortOrder: "nameAsc",
     startNumber: 1,
     suffix: "",
+    useCustomBaseName: false,
   };
 }
 

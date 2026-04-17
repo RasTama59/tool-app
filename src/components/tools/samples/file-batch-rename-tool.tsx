@@ -190,6 +190,47 @@ export function FileBatchRenameTool({content}: Props) {
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">
+            <div className="space-y-2 sm:col-span-2">
+              <span className="text-sm font-semibold text-foreground">
+                {content.fields.customBaseNameLabel}
+              </span>
+              <label className="flex cursor-pointer items-start gap-3 rounded-[20px] border border-line bg-[#fbfdff] px-4 py-3">
+                <input
+                  checked={options.useCustomBaseName}
+                  className="mt-1 h-4 w-4 rounded border-[#9ab5d6] text-[#215da8] focus:ring-[#215da8]"
+                  onChange={(event) => {
+                    setDownloadError("");
+                    setOptions((current) => ({
+                      ...current,
+                      useCustomBaseName: event.target.checked,
+                    }));
+                  }}
+                  type="checkbox"
+                />
+                <span className="space-y-1 text-sm leading-7 text-foreground">
+                  <span className="block">
+                    {content.fields.customBaseNameEnabledLabel}
+                  </span>
+                  <span className="block text-xs leading-6 text-muted">
+                    {content.fields.customBaseNameEnabledHint}
+                  </span>
+                </span>
+              </label>
+              <input
+                className="min-h-11 w-full rounded-[18px] border border-line bg-white px-3.5 text-sm text-foreground outline-none transition focus:border-[#9dbde3] focus:ring-4 focus:ring-[#215da8]/10 disabled:bg-[#f4f7fb] disabled:text-muted"
+                disabled={!options.useCustomBaseName}
+                onChange={(event) => {
+                  setDownloadError("");
+                  setOptions((current) => ({
+                    ...current,
+                    customBaseName: event.target.value,
+                  }));
+                }}
+                placeholder={content.fields.customBaseNamePlaceholder}
+                value={options.customBaseName}
+              />
+            </div>
+
             <label className="space-y-2">
               <span className="text-sm font-semibold text-foreground">
                 {content.fields.prefixLabel}
@@ -231,7 +272,8 @@ export function FileBatchRenameTool({content}: Props) {
                 {content.fields.findLabel}
               </span>
               <input
-                className="min-h-11 w-full rounded-[18px] border border-line bg-white px-3.5 text-sm text-foreground outline-none transition focus:border-[#9dbde3] focus:ring-4 focus:ring-[#215da8]/10"
+                className="min-h-11 w-full rounded-[18px] border border-line bg-white px-3.5 text-sm text-foreground outline-none transition focus:border-[#9dbde3] focus:ring-4 focus:ring-[#215da8]/10 disabled:bg-[#f4f7fb] disabled:text-muted"
+                disabled={options.useCustomBaseName}
                 onChange={(event) => {
                   setDownloadError("");
                   setOptions((current) => ({
@@ -249,7 +291,8 @@ export function FileBatchRenameTool({content}: Props) {
                 {content.fields.replaceLabel}
               </span>
               <input
-                className="min-h-11 w-full rounded-[18px] border border-line bg-white px-3.5 text-sm text-foreground outline-none transition focus:border-[#9dbde3] focus:ring-4 focus:ring-[#215da8]/10"
+                className="min-h-11 w-full rounded-[18px] border border-line bg-white px-3.5 text-sm text-foreground outline-none transition focus:border-[#9dbde3] focus:ring-4 focus:ring-[#215da8]/10 disabled:bg-[#f4f7fb] disabled:text-muted"
+                disabled={options.useCustomBaseName}
                 onChange={(event) => {
                   setDownloadError("");
                   setOptions((current) => ({
@@ -297,6 +340,7 @@ export function FileBatchRenameTool({content}: Props) {
             <input
               checked={options.caseSensitiveReplace}
               className="mt-1 h-4 w-4 rounded border-[#9ab5d6] text-[#215da8] focus:ring-[#215da8]"
+              disabled={options.useCustomBaseName}
               onChange={(event) => {
                 setDownloadError("");
                 setOptions((current) => ({
@@ -306,7 +350,12 @@ export function FileBatchRenameTool({content}: Props) {
               }}
               type="checkbox"
             />
-            <span className="text-sm leading-7 text-foreground">
+            <span
+              className={cx(
+                "text-sm leading-7",
+                options.useCustomBaseName ? "text-muted" : "text-foreground",
+              )}
+            >
               {content.fields.caseSensitiveReplaceLabel}
             </span>
           </label>
