@@ -15,6 +15,7 @@ import {toolContentJa} from "@/content/tools/tool-content-ja";
 import type {ToolSlug} from "@/content/tools/tool-types";
 import {getPathname} from "@/i18n/navigation";
 import {buildLanguageAlternates} from "@/lib/seo";
+import {getOpenGraphImages, getTwitterImages} from "@/lib/share-image";
 import {getSiteChromeContent} from "@/lib/site-chrome";
 
 type LocalizedLinkItem = {
@@ -189,11 +190,13 @@ export async function getGuideIndexMetadata(locale: AppLocale): Promise<Metadata
       title: guideMessages("metadataTitle"),
       description: guideMessages("metadataDescription"),
       url: pathname,
+      images: getOpenGraphImages(locale),
     },
     twitter: {
       card: "summary_large_image",
       title: guideMessages("metadataTitle"),
       description: guideMessages("metadataDescription"),
+      images: getTwitterImages(locale),
     },
   };
 }
@@ -227,11 +230,13 @@ export async function getGuideMetadata(
       title: guide.metadata.title,
       description: guide.metadata.description,
       url: pathname,
+      images: getOpenGraphImages(locale),
     },
     twitter: {
       card: "summary_large_image",
       title: guide.metadata.title,
       description: guide.metadata.description,
+      images: getTwitterImages(locale),
     },
   };
 }

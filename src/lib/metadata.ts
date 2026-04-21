@@ -6,6 +6,7 @@ import type {AppLocale} from "@/config/site";
 import {faqItems, themeItems} from "@/content/home";
 import {getPathname} from "@/i18n/navigation";
 import {buildLanguageAlternates} from "@/lib/seo";
+import {getOpenGraphImages, getTwitterImages} from "@/lib/share-image";
 
 function toStringArray(value: unknown) {
   return Array.isArray(value)
@@ -40,11 +41,13 @@ export async function getHomeMetadata(locale: AppLocale): Promise<Metadata> {
       title: metadataMessages("title"),
       description: metadataMessages("description"),
       url: pathname,
+      images: getOpenGraphImages(locale),
     },
     twitter: {
       card: "summary_large_image",
       title: metadataMessages("title"),
       description: metadataMessages("description"),
+      images: getTwitterImages(locale),
     },
   };
 }

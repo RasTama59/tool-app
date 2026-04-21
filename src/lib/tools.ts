@@ -16,6 +16,7 @@ import {
 } from "@/content/tools/tool-types";
 import {getPathname} from "@/i18n/navigation";
 import {buildLanguageAlternates} from "@/lib/seo";
+import {getOpenGraphImages, getTwitterImages} from "@/lib/share-image";
 import {getSiteChromeContent} from "@/lib/site-chrome";
 
 type LocalizedToolLinkItem = Omit<ToolLinkItem, "href"> & {
@@ -137,11 +138,13 @@ export async function getToolMetadata(
       title: tool.metadata.title,
       description: tool.metadata.description,
       url: pathname,
+      images: getOpenGraphImages(locale),
     },
     twitter: {
       card: "summary_large_image",
       title: tool.metadata.title,
       description: tool.metadata.description,
+      images: getTwitterImages(locale),
     },
   };
 }
@@ -172,11 +175,13 @@ export async function getToolIndexMetadata(locale: AppLocale): Promise<Metadata>
       title: indexMessages("metadataTitle"),
       description: indexMessages("metadataDescription"),
       url: pathname,
+      images: getOpenGraphImages(locale),
     },
     twitter: {
       card: "summary_large_image",
       title: indexMessages("metadataTitle"),
       description: indexMessages("metadataDescription"),
+      images: getTwitterImages(locale),
     },
   };
 }

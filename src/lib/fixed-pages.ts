@@ -9,6 +9,7 @@ import {fixedPageSpecs} from "@/content/fixed-pages";
 import type {FixedPageSlug} from "@/content/site-chrome";
 import {getPathname} from "@/i18n/navigation";
 import {buildLanguageAlternates} from "@/lib/seo";
+import {getOpenGraphImages, getTwitterImages} from "@/lib/share-image";
 import {getSiteChromeContent} from "@/lib/site-chrome";
 
 type PagePanel = {
@@ -56,11 +57,13 @@ export async function getFixedPageMetadata(
       title: entry.metadata.title,
       description: entry.metadata.description,
       url: pathname,
+      images: getOpenGraphImages(locale),
     },
     twitter: {
       card: "summary_large_image",
       title: entry.metadata.title,
       description: entry.metadata.description,
+      images: getTwitterImages(locale),
     },
   };
 }

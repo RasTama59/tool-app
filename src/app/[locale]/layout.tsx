@@ -8,7 +8,7 @@ import {notFound} from "next/navigation";
 import {SiteIntegrations} from "@/components/common/site-integrations";
 import {SiteFooter} from "@/components/layout/site-footer";
 import {SiteHeader} from "@/components/layout/site-header";
-import {localeMetadata} from "@/config/site";
+import {getSiteUrl, localeMetadata} from "@/config/site";
 import {
   getAdSenseClientId,
   getGoogleSiteVerification,
@@ -41,6 +41,7 @@ export function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
+  metadataBase: new URL(getSiteUrl()),
   other: adSenseClientId
     ? {
         "google-adsense-account": adSenseClientId,
